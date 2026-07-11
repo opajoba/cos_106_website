@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Study Planner | Oparinde Oluwajoba</title>
+
+    <link rel="stylesheet" href="../Mode.css" />
+
+    <link rel="stylesheet" href="planner.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <h2>Oparinde Oluwajoba</h2>
+
+        <span>Computer Science Student</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+
+          <li><a href="about.html">About</a></li>
+
+          <li><a href="projects.html">Projects</a></li>
+
+          <li><a class="active" href="planner.html">Planner</a></li>
+
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- ===========================
+        HERO
+=========================== -->
+
+      <section class="planner-hero">
+        <h1>Study Planner</h1>
+
+        <p>
+          Organize your academic tasks, track your progress and stay productive.
+        </p>
+      </section>
+
+      <!-- ===========================
+        TASK FORM
+=========================== -->
+
+      <section class="planner-container">
+        <div class="planner-card">
+          <h2>Add New Task</h2>
+
+          <form id="task-form">
+            <div class="input-group">
+              <label for="task-name"> Task Title </label>
+
+              <input
+                type="text"
+                id="task-name"
+                placeholder="Enter task..."
+                required
+              />
+            </div>
+
+            <div class="input-group">
+              <label for="task-date"> Due Date </label>
+
+              <input type="date" id="task-date" required />
+            </div>
+
+            <div class="input-group">
+              <label for="priority"> Priority </label>
+
+              <select id="priority">
+                <option>High</option>
+
+                <option>Medium</option>
+
+                <option>Low</option>
+              </select>
+            </div>
+
+            <button type="submit" id="add-task">
+              <i class="fas fa-plus"></i>
+
+              Add Task
+            </button>
+          </form>
+        </div>
+
+        <!-- ===========================
+        FILTERS
+=========================== -->
+
+        <div class="filter-container">
+          <button class="filter-btn active" data-filter="all">All</button>
+
+          <button class="filter-btn" data-filter="pending">Pending</button>
+
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <!-- ===========================
+        TASK LIST
+=========================== -->
+
+        <div class="task-section">
+          <h2>My Tasks</h2>
+
+          <ul id="task-list">
+            <!-- JavaScript adds tasks here -->
+          </ul>
+        </div>
+        <!-- ===========================
+        PROGRESS SECTION
+=========================== -->
+
+        <div class="progress-card">
+          <h2>Progress</h2>
+
+          <div class="progress-info">
+            <span> Completed Tasks </span>
+
+            <span id="progress-text"> 0 / 0 </span>
+          </div>
+
+          <div class="progress-bar">
+            <div id="progress-fill"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===========================
+        FOOTER
+=========================== -->
+
+      <footer>
+        <div class="footer-content">
+          <h3>Oparinde Oluwajoba</h3>
+
+          <p>Computer Science Student</p>
+
+          <div class="socials">
+            <a href="#">
+              <i class="fab fa-github"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+
+            <a href="#">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+
+          <p class="copyright">
+            © 2026 Oparinde Oluwajoba. All Rights Reserved.
+          </p>
+        </div>
+      </footer>
+
+      <script src="planner.js"></script>
+    </main>
+  </body>
+</html>

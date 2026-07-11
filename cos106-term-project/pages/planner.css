@@ -1,0 +1,544 @@
+/*=========================================
+        PLANNER PAGE
+=========================================*/
+
+:root {
+  --primary: #15135f;
+  --secondary: #4f46e5;
+  --light: #f5f7fb;
+  --white: #ffffff;
+  --text: #333;
+  --success: #22c55e;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  background: var(--light);
+
+  color: var(--text);
+}
+
+/*=========================================
+        HERO
+=========================================*/
+
+.planner-hero {
+  text-align: center;
+
+  padding: 90px 8% 70px;
+}
+
+.planner-hero h1 {
+  font-size: 3.5rem;
+
+  color: var(--primary);
+
+  margin-bottom: 15px;
+}
+
+.planner-hero p {
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+/*=========================================
+        CONTAINER
+=========================================*/
+
+.planner-container {
+  width: 90%;
+
+  max-width: 1100px;
+
+  margin: auto;
+}
+
+/*=========================================
+        FORM CARD
+=========================================*/
+
+.planner-card {
+  background: var(--white);
+
+  border-radius: 20px;
+
+  padding: 35px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 40px;
+}
+
+.planner-card h2 {
+  color: var(--primary);
+
+  margin-bottom: 25px;
+}
+
+.input-group {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-weight: 600;
+
+  margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 14px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 10px;
+
+  font-size: 1rem;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  border-color: var(--primary);
+}
+
+#add-task {
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: var(--primary);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+#add-task:hover {
+  background: var(--secondary);
+}
+
+/*=========================================
+        FILTER BUTTONS
+=========================================*/
+
+.filter-container {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 35px;
+}
+
+.filter-btn {
+  border: none;
+
+  background: white;
+
+  color: var(--primary);
+
+  padding: 12px 28px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.filter-btn:hover {
+  background: var(--primary);
+
+  color: white;
+}
+
+.filter-btn.active {
+  background: var(--primary);
+
+  color: white;
+}
+
+/*=========================================
+        TASK LIST
+=========================================*/
+
+.task-section {
+  background: white;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 40px;
+}
+
+.task-section h2 {
+  color: var(--primary);
+
+  margin-bottom: 25px;
+}
+
+#task-list {
+  list-style: none;
+}
+
+.task {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px;
+
+  margin-bottom: 15px;
+
+  background: #f8f8f8;
+
+  border-radius: 12px;
+
+  transition: 0.3s;
+}
+
+.task:hover {
+  transform: translateY(-3px);
+}
+
+.task.completed {
+  opacity: 0.7;
+
+  text-decoration: line-through;
+}
+
+.task-info {
+  flex: 1;
+}
+
+.task-info h3 {
+  margin-bottom: 8px;
+}
+
+.task-info p {
+  color: #666;
+
+  font-size: 0.9rem;
+}
+
+.task-actions {
+  display: flex;
+
+  gap: 10px;
+}
+
+.complete-btn,
+.delete-btn {
+  border: none;
+
+  cursor: pointer;
+
+  padding: 10px 15px;
+
+  border-radius: 8px;
+
+  color: white;
+
+  transition: 0.3s;
+}
+
+.complete-btn {
+  background: var(--success);
+}
+
+.delete-btn {
+  background: #ef4444;
+}
+
+.complete-btn:hover,
+.delete-btn:hover {
+  transform: scale(1.05);
+}
+/*=========================================
+        PROGRESS CARD
+=========================================*/
+
+.progress-card {
+  background: var(--white);
+
+  border-radius: 20px;
+
+  padding: 30px;
+
+  box-shadow: var(--shadow);
+
+  margin-bottom: 60px;
+}
+
+.progress-card h2 {
+  color: var(--primary);
+
+  margin-bottom: 20px;
+}
+
+.progress-info {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 15px;
+
+  font-weight: 600;
+}
+
+.progress-bar {
+  width: 100%;
+
+  height: 18px;
+
+  background: #ddd;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+}
+
+#progress-fill {
+  width: 0%;
+
+  height: 100%;
+
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+
+  border-radius: 30px;
+
+  transition: width 0.5s ease;
+}
+
+/*=========================================
+        FOOTER
+=========================================*/
+
+footer {
+  background: var(--primary);
+
+  color: white;
+
+  padding: 50px 20px;
+
+  margin-top: 80px;
+}
+
+.footer-content {
+  max-width: 1200px;
+
+  margin: auto;
+
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 2rem;
+
+  margin-bottom: 10px;
+}
+
+.footer-content p {
+  margin: 10px 0;
+}
+
+.socials {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 20px;
+
+  margin: 25px 0;
+}
+
+.socials a {
+  width: 50px;
+
+  height: 50px;
+
+  border-radius: 50%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: white;
+
+  color: var(--primary);
+
+  text-decoration: none;
+
+  font-size: 1.3rem;
+
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  background: var(--secondary);
+
+  color: white;
+
+  transform: translateY(-5px);
+}
+
+/*=========================================
+        SCROLL REVEAL
+=========================================*/
+
+.hidden {
+  opacity: 0;
+
+  transform: translateY(50px);
+
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+
+  transform: translateY(0);
+}
+
+/*=========================================
+        RESPONSIVE DESIGN
+=========================================*/
+
+@media (max-width: 992px) {
+  .planner-hero h1 {
+    font-size: 3rem;
+  }
+
+  .planner-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .planner-hero {
+    padding: 70px 8%;
+  }
+
+  .planner-hero h1 {
+    font-size: 2.6rem;
+  }
+
+  .task {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .task-actions {
+    width: 100%;
+
+    justify-content: flex-end;
+  }
+
+  .progress-info {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .planner-card {
+    padding: 25px;
+  }
+
+  .task-section {
+    padding: 20px;
+  }
+
+  .filter-btn {
+    width: 140px;
+  }
+
+  .planner-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .planner-hero p {
+    font-size: 0.95rem;
+  }
+
+  .complete-btn,
+  .delete-btn {
+    padding: 8px 12px;
+  }
+
+  .socials {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  .planner-hero h1 {
+    font-size: 1.9rem;
+  }
+
+  .footer-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .input-group input,
+  .input-group select {
+    font-size: 0.95rem;
+  }
+
+  #add-task {
+    font-size: 0.95rem;
+  }
+}
