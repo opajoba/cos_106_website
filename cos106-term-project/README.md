@@ -1,3 +1,3 @@
 # COS106 Term Project
 
-Project scaffold for lab assessment.
+Contains work done by Oparinde Oluwajoba Miracle
